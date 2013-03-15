@@ -18,6 +18,11 @@ task :setup do
 	`cd ~/.vim`
 
 	# Install Rails plugin
-	`wget -c http://www.vim.org/scripts/download_script.php?src_id=16429 -o rails-vim.zip`
-	`unzip rails-vim.zip ~/.vim`
+	 unless File.exists?("vim-rails")
+		`git clone git://github.com/tpope/vim-rails.git`
+		 `cp -r vim-rails/* ~/.vim`
+	 end
+	 unless File.exists("vim-bundler")
+		`git clone git://github.com/tpope/vim-bundler.git`
+	end
 end
