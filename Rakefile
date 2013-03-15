@@ -10,19 +10,19 @@ task :setup do
 	 end
 
 	# Haml support
-	unless File.exists?("vim-haml")
+	unless File.exist?("vim-haml")
 		`git clone git://github.com/tpope/vim-haml.git`
 	end
-	Dir.mkdir(File.expand_path("~/.vim")) unless File.exists?(File.expand_path("~/.vim"))
+	Dir.mkdir(File.expand_path("~/.vim")) unless File.exist?(File.expand_path("~/.vim"))
 	`cp -r vim-haml/* ~/.vim`
 	`cd ~/.vim`
 
 	# Install Rails plugin
-	 unless File.exists?("vim-rails")
+	 unless File.exist?("vim-rails")
 		`git clone git://github.com/tpope/vim-rails.git`
 		 `cp -r vim-rails/* ~/.vim`
 	 end
-	 unless File.exists("vim-bundler")
+	 unless File.exist?("vim-bundler")
 		`git clone git://github.com/tpope/vim-bundler.git`
 	end
 end
