@@ -79,4 +79,4 @@ map <leader>tm :tabmove
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
-
+match Todo /\s\+$/							" Highlight trailing whitespaces
