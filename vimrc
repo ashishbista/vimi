@@ -68,6 +68,9 @@ map <leader>tm :tabmove
 inoremap <C-s> <esc>:w<cr>i
 nnoremap <C-s> :w<cr>
 
+" Autocomplete
+inoremap <tab> <C-p>
+
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
 
