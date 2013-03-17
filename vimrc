@@ -65,8 +65,8 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
 " Save with Ctrl+s
-inoremap <C-s> <esc>:w<cr>a
-nnoremap <C-s> :w<cr>a
+inoremap <C-s> <esc>:w<cr>i
+nnoremap <C-s> :w<cr>
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
