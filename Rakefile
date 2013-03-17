@@ -26,11 +26,42 @@ task :setup do
       sh "cp -r #{k}/* ~/.vim"
     end
   end
+
   puts "Setup completed. Enjoy!"
+
+end
+
+task :configure do
+
+  # The follwing steps are required for ctrl+s
+  if ENV['SHELL'].include? "zsh"
+    zsh_configs = <<-END
+    alias vim="stty stop '' -ixoff ; vim"
+    ttyctl -f
+    END
+    write_configs_to_file("~/.zshrc", zsh_configs)  
+  elsif ENV['SHELL'].include? "bash"
+    bash_configs = <<-END
+    vim()
+    {
+      local STTYOPTS="$(stty --save)"
+      stty stop '' -ixoff
+      command vim "$@"
+      stty "$STTYOPTS"
+    }
+    END
+    write_configs_to_file("~/.bashrc", bash_configs)
+  end
 end
 
 task :update do
   desc "Updates the library"
   sh "git pull"
   Rake::Task['setup'].invoke
+end
+
+def write_configs_to_file(file, configs)
+   file = File.open(File.expand_path(file), "a")
+   file.write configs
+   file.close
 end
