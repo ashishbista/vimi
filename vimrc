@@ -89,3 +89,9 @@ inoremap <tab> <C-p>
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 match Todo /\s\+$/							" Highlight trailing whitespaces
 
+" Buffer navigating
+inoremap bb <esc>:bp<cr>i
+nnoremap bb :bp<cr>
+inoremap nn <esc>:bn<cr>i
+nnoremap nn :bn<cr>
+
