@@ -6,6 +6,8 @@ This repo contains my personalized vim configurations.
 `cd vmfiles`
 
 `rake`
+### Update 
+`rake upate`
 
 ## License
 
