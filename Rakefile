@@ -17,7 +17,8 @@ task :setup do
     'vim-haml' => 'git://github.com/tpope/vim-haml.git',
     'vim-rails' => ' git://github.com/tpope/vim-rails.git',
     'vim-bundler' => 'git://github.com/tpope/vim-bundler.git',
-    'ack.vim' => 'git://github.com/mileszs/ack.vim.git'
+    'ack.vim' => 'git://github.com/mileszs/ack.vim.git',
+    'vim-fugitive' => 'git://github.com/tpope/vim-fugitive.git'
   }
 
   plugins.each do |k, v|
