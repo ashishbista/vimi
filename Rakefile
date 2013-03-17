@@ -8,9 +8,7 @@ task :setup do
   # Copy rc files
   %w[ vimrc ].each do |file|
      dest = File.expand_path(("~/.#{file}"))
-     unless File.exist?(dest)
-       ln_sf(File.expand_path("#{file}", __FILE__), dest)
-     end
+     sh File.expand_path("#{file}", __FILE__), dest
    end
 
   Dir.mkdir(File.expand_path("~/.vim")) unless File.exist?(File.expand_path("~/.vim"))
