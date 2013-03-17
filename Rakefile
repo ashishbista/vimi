@@ -8,7 +8,7 @@ task :setup do
   # Copy rc files
   %w[ vimrc ].each do |file|
      dest = File.expand_path(("~/.#{file}"))
-     sh File.expand_path("#{file}", __FILE__), dest
+     cp file, dest
    end
 
   Dir.mkdir(File.expand_path("~/.vim")) unless File.exist?(File.expand_path("~/.vim"))
@@ -26,5 +26,11 @@ task :setup do
       sh "cp -r #{k}/* ~/.vim"
     end
   end
+  puts "Setup completed. Enjoy!"
+end
 
+task :update do
+  desc "Updates the library"
+  sh "git pull"
+  Rake::Task['setup'].invoke
 end
