@@ -3,6 +3,7 @@ task :default => [:setup]
 
 task :setup do
   # Create unified swap directory
+  Dir.mkdir(File.expand_path("~/.vim")) unless File.exist?(File.expand_path("~/.vim"))
   Dir.mkdir(File.expand_path("~/.vim/swaps")) unless File.exist?(File.expand_path("~/.vim/swaps"))
 
   # Copy rc files
