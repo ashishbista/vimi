@@ -69,7 +69,7 @@ inoremap <C-s> <esc>:w<cr>a
 nnoremap <C-s> :w<cr>
 
 " Autocomplete
-inoremap <tab> <C-p>
+" inoremap <tab> <C-p>
 
 " Buffer navigation
 inoremap t <esc>:bp<cr>a
