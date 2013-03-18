@@ -7,7 +7,7 @@ This repo contains my personalized vim configurations.
 
 `rake`
 ### Update 
-`rake upate`
+`rake update`
 
 ## License
 
