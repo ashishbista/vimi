@@ -65,11 +65,18 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
 " Save with Ctrl+s
-inoremap <C-s> <esc>:w<cr>i
+inoremap <C-s> <esc>:w<cr>a
 nnoremap <C-s> :w<cr>
 
 " Autocomplete
-inoremap <tab> <C-p>
+" inoremap <tab> <C-p>
+
+" Buffer navigation
+inoremap t <esc>:bp<cr>a
+nnoremap t :bp<cr>
+
+inoremap y <esc>:bn<cr>a
+inoremap y :bn<cr>
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>

@@ -3,6 +3,7 @@ task :default => [:setup]
 
 task :setup do
   # Create unified swap directory
+  Dir.mkdir(File.expand_path("~/.vim")) unless File.exist?(File.expand_path("~/.vim"))
   Dir.mkdir(File.expand_path("~/.vim/swaps")) unless File.exist?(File.expand_path("~/.vim/swaps"))
 
   # Copy rc files
@@ -18,7 +19,8 @@ task :setup do
     'vim-rails' => ' git://github.com/tpope/vim-rails.git',
     'vim-bundler' => 'git://github.com/tpope/vim-bundler.git',
     'ack.vim' => 'git://github.com/mileszs/ack.vim.git',
-    'vim-fugitive' => 'git://github.com/tpope/vim-fugitive.git'
+    'vim-fugitive' => 'git://github.com/tpope/vim-fugitive.git',
+    'ctrlp.vim' => 'git://github.com/kien/ctrlp.vim.git'
   }
 
   plugins.each do |k, v|
