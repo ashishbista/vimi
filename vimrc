@@ -72,11 +72,11 @@ nnoremap <C-s> :w<cr>
 " inoremap <tab> <C-p>
 
 " Buffer navigation
-inoremap t <esc>:bp<cr>a
-nnoremap t :bp<cr>
+" inoremap t <esc>:bp<cr>a
+" nnoremap t :bp<cr>
 
-inoremap y <esc>:bn<cr>a
-inoremap y :bn<cr>
+" inoremap y <esc>:bn<cr>a
+" inoremap y :bn<cr>
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
