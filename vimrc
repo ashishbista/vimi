@@ -40,6 +40,8 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/swaps  " Keep swap files in one location
 
+autocmd vimenter * NERDTree
+
 " UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
@@ -52,6 +54,9 @@ set laststatus=2                  " Show the status line all the time
 
 " Or use vividchalk
 "colorscheme topfunky-light
+inoremap <C-s> <esc>:w<cr>a
+nnoremap <C-s> :w<cr>a
+map <C-n> :NERDTreeToggle<CR>
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -95,10 +100,4 @@ nnoremap <C-s> :w<cr>
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 match Todo /\s\+$/							" Highlight trailing whitespaces
-
-" Buffer navigating
-inoremap bb <esc>:bp<cr>i
-nnoremap bb :bp<cr>
-inoremap nn <esc>:bn<cr>i
-nnoremap nn :bn<cr>
 
