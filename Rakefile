@@ -20,7 +20,9 @@ task :setup do
     'vim-bundler' => 'git://github.com/tpope/vim-bundler.git',
     'ack.vim' => 'git://github.com/mileszs/ack.vim.git',
     'vim-fugitive' => 'git://github.com/tpope/vim-fugitive.git',
-    'ctrlp.vim' => 'git://github.com/kien/ctrlp.vim.git'
+    'ctrlp.vim' => 'git://github.com/kien/ctrlp.vim.git',
+    'nerdtree' => 'git://github.com/scrooloose/nerdtree.git',
+    'nerdcommenter' => 'git://github.com/scrooloose/nerdcommenter.git'
   }
 
   plugins.each do |k, v|
