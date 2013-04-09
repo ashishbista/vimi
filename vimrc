@@ -40,20 +40,15 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/swaps  " Keep swap files in one location
 
-autocmd vimenter * NERDTree
-
 " UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
-map <F2> :retab <CR> :wq! <CR>
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
-"set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
-
-" Or use vividchalk
-"colorscheme topfunky-light
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+"Save with ctrl s
 inoremap <C-s> <esc>:w<cr>a
 nnoremap <C-s> :w<cr>a
 map <C-n> :NERDTreeToggle<CR>
@@ -69,19 +64,6 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-" Save with Ctrl+s
-inoremap <C-s> <esc>:w<cr>a
-nnoremap <C-s> :w<cr>
-
-" Autocomplete
-" inoremap <tab> <C-p>
-
-" Buffer navigation
-" inoremap t <esc>:bp<cr>a
-" nnoremap t :bp<cr>
-
-" inoremap y <esc>:bn<cr>a
-" inoremap y :bn<cr>
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
@@ -100,4 +82,10 @@ nnoremap <C-s> :w<cr>
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 match Todo /\s\+$/							" Highlight trailing whitespaces
+
+"Disable beep and flash
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
 
