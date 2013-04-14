@@ -22,7 +22,8 @@ task :setup do
     'vim-fugitive' => 'git://github.com/tpope/vim-fugitive.git',
     'ctrlp.vim' => 'git://github.com/kien/ctrlp.vim.git',
     'nerdtree' => 'git://github.com/scrooloose/nerdtree.git',
-    'nerdcommenter' => 'git://github.com/scrooloose/nerdcommenter.git'
+    'nerdcommenter' => 'git://github.com/scrooloose/nerdcommenter.git',
+    'vim-multiple-cursors' => 'git://github.com/terryma/vim-multiple-cursors.git'
   }
 
   plugins.each do |k, v|
