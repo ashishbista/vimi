@@ -2,7 +2,7 @@
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
 set nocompatible                  " Must come first because it changes other options.
-
+let mapleader = "'"
 silent! call pathogen#runtime_append_all_bundles()
 
 syntax enable                     " Turn on syntax highlighting.
@@ -51,7 +51,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 "Save with ctrl s
 inoremap <C-s> <esc>:w<cr>a
 nnoremap <C-s> :w<cr>
-map <C-m> :NERDTreeToggle<CR>
+map <C-b> :CtrlPBuffer<CR>
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -64,7 +64,6 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-let mapleader = "'"
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
