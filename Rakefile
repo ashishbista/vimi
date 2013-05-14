@@ -23,7 +23,10 @@ task :setup do
     'ctrlp.vim' => 'git://github.com/kien/ctrlp.vim.git',
     'nerdtree' => 'git://github.com/scrooloose/nerdtree.git',
     'nerdcommenter' => 'git://github.com/scrooloose/nerdcommenter.git',
-    'vim-multiple-cursors' => 'git://github.com/terryma/vim-multiple-cursors.git'
+    'vim-multiple-cursors' => 'git://github.com/terryma/vim-multiple-cursors.git',
+    'vim-buffergator' => 'git://github.com/jeetsukumaran/vim-buffergator.git',
+    'supertab' => 'git://github.com/ervandew/supertab.git',
+    'vim-rubytest' => 'git://github.com/ashishbista/vim-rubytest.git'
   }
 
   plugins.each do |k, v|
