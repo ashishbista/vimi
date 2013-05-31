@@ -90,3 +90,7 @@ if has('autocmd')
 endif
 " Use system clipboard
 set clipboard=unnamedplus
+
+let NERDTreeWinSize=20
+" Autoremove trailing whitespaces
+autocmd BufWritePre * :%s/\s\+$//e
